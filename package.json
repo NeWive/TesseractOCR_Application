@@ -1,0 +1,66 @@
+{
+  "name": "ocr_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-web": "cross-env BROWSER=none NODE_ENV=development electron .",
+    "dev-app": "cross-env BROWSER=none NODE_ENV=production electron .",
+    "pack": "electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps",
+    "dist": "electron-builder",
+    "dist-win64": "electron-builder --win -x64"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "image-to-base64": "^2.2.0",
+    "lodash": "^4.17.21",
+    "tesseract.js": "^2.1.5"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.178",
+    "@types/react-transition-group": "^4.4.4",
+    "create-react-app": "^5.0.0",
+    "cross-env": "^7.0.3",
+    "electron": "^17.0.1",
+    "electron-builder": "^22.14.13",
+    "electron-reloader": "^1.2.2",
+    "wait-on": "^6.0.1"
+  },
+  "build": {
+    "appId": "com.newive",
+    "productName": "ocr application",
+    "files": [
+      "module/**/*",
+      "main.js",
+      "node_modules/**/*",
+      "ocr_app_client/build/**/*",
+      "icons/**/*"
+    ],
+    "directories": {
+      "output": "build/",
+      "app": "./",
+      "buildResources": "assets"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": true,
+      "createDesktopShortcut": true
+    },
+    "win": {
+      "icon": "./icons/icon.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  }
+}

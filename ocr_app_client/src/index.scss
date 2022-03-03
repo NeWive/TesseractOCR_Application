@@ -1,0 +1,70 @@
+@import "colors";
+
+.deep-blue-background {
+    background-color: $DEEP_BLUE;
+}
+
+.light-blue-background {
+    background-color: $LIGHT_BLUE;
+}
+
+.grey-background {
+    background-color: $GREY;
+}
+
+.teal-background {
+    background-color: $TEAL;
+}
+
+.green-background {
+    background-color: $GREEN;
+}
+
+.light-background {
+    background-color: $LIGHT_YELLOW;
+}
+
+.yellow-background {
+    background-color: $YELLOW;
+}
+
+.flex-all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-font {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.trans-background {
+    transition: background-color .5s ease-in-out;
+}
+
+.absolute-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.transition-all {
+    transition: all .2s ease-in-out;
+}
+
+.transition-transform {
+    transition: transform .2s ease-in-out;
+}
+
+.transition-opacity {
+    transition: opacity .2s ease-in-out;
+}
+
+#root {
+    position: relative;
+    height: 100%;
+}

@@ -1,0 +1,133 @@
+@import "../../../colors";
+.modifier {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    .modifier-sel {
+        position: relative;
+        width: 50%;
+        height: 100%;
+    }
+    .watcher {
+        box-sizing: border-box;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid #282c34;
+        img {
+            position: relative;
+            max-width: 100%;
+        }
+    }
+    .txt {
+        .tools {
+            height: 60px;
+            padding: 10px 15px;
+            box-sizing: border-box;
+            display: flex;
+            position: relative;
+            .txt-tool {
+                display: flex;
+                width: 40px;
+                height: 40px;
+                background-color: inherit;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                &:first-child {
+                    margin-right: 5px;
+                }
+                &:hover {
+                    background-color: #83C5BE;
+                }
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            .tool-button {
+                margin-left: 10px;
+                width: 40px;
+                height: 40px;
+                border-radius: 10px;
+                img {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .stop-button {
+                &:hover {
+                    background-color: #83C5BE;
+                }
+            }
+            .restart-button {
+                border-radius: 100%;
+                opacity: 0.5;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .tips-box {
+                position: absolute;
+                right: 20px;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+                height: 40px;
+                width: 300px;
+                p {
+                    position: absolute;
+                    left: 0;
+                    border: 1px solid rgba(0,0,0,.125);
+                    border-radius: 5px;
+                    font-size: 20px;
+                    background-color: inherit;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .item-enter {
+                    opacity: 0;
+                }
+                .item-enter-active {
+                    opacity: 1;
+                    transition: opacity 200ms ease-in;
+                }
+                .item-exit {
+                    opacity: 1;
+                }
+                .item-exit-active {
+                    opacity: 0;
+                    transition: opacity 200ms ease-in;
+                }
+            }
+        }
+
+        .input {
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            position: relative;
+            height: 90%;
+            textarea {
+                resize: none;
+                width: 95%;
+                height: 98%;
+                background: $GREY;
+                outline: none;
+                font-size: 16px;
+                border-radius: 10px;
+                padding: 10px;
+                border: 1px solid #e4e4e4;
+                &:focus {
+                    box-shadow: 0 0 8px 2px $LIGHT_BLUE;
+                }
+            }
+        }
+    }
+}

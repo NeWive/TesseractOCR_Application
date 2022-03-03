@@ -1,0 +1,29 @@
+.cropper_handler_container {
+    position: relative;
+    width: 100%;
+    .button_box {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0;
+        div {
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            position: relative;
+            opacity: 0.4;
+            box-shadow: transparent;
+            &:first-child {
+                margin-right: 20px;
+            }
+            &:hover {
+                opacity: 1;
+                box-shadow: 0 5px 15px -5px rgba(0, 0, 0, .5);
+            }
+            img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

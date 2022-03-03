@@ -1,0 +1,82 @@
+@import "../../../colors";
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    width: 35px;
+    height: 26px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+    justify-content: space-between;
+    cursor: pointer;
+    &:hover {
+        .toggle-sel {
+            background-color: $LIGHT_BLUE;
+        }
+    }
+    .toggle-sel {
+        position: relative;
+        transform-origin: center center;
+        width: 100%;
+        height: 6px;
+        background-color: $TEAL;
+        border-radius: 5px;
+    }
+}
+
+.menu-toggle-anime-enter-done {
+    .toggle-sel {
+        &:first-child {
+            transform: translateY(0) rotate(0);
+        }
+        &:nth-child(2) {
+            transform: rotate3d(0);
+        }
+        &:nth-child(3) {
+            transform: translateY(0) rotate(0);
+        }
+    }
+}
+
+.menu-toggle-anime-enter-done {
+    .toggle-sel {
+        &:first-child {
+            transform: translateY(10.5px) rotate(45deg);
+        }
+        &:nth-child(2) {
+            transform: rotate3d(0, 1, 0, -90deg);
+        }
+        &:nth-child(3) {
+            transform: translateY(-10.5px) rotate(-45deg);
+        }
+    }
+}
+
+.menu-toggle-anime-exit {
+    .toggle-sel {
+        &:first-child {
+            transform: translateY(10.5px) rotate(45deg);
+        }
+        &:nth-child(2) {
+            transform: rotate3d(0, 1, 0, -90deg);
+        }
+        &:nth-child(3) {
+            transform: translateY(-10.5px) rotate(-45deg);
+        }
+    }
+}
+
+.menu-toggle-anime-exit-done {
+    .toggle-sel {
+        &:first-child {
+            transform: translateY(0) rotate(0);
+        }
+        &:nth-child(2) {
+            transform: rotate3d(0);
+        }
+        &:nth-child(3) {
+            transform: translateY(0) rotate(0);
+        }
+    }
+}
